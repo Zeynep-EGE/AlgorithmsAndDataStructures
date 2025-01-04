@@ -4,21 +4,28 @@
 3^3 = 3*3*3 = 27 
 1^3 + 5^3 + ^3 = 1+125+27 = 153  */
 
-var num = parseInt(prompt("Please enter a number:"));
-var numbers = [];
-var digit = 1;
-var sum = 0;
+let num =prompt('please enter a number :');
+let number = [];
+number = String(num).split('').map(Number);
+let sum = 0;
+let digit = 1;
 
-numbers = String(num).split("").map(Number);
-
-digit = numbers.length;
-
-for (let i = 0; i < numbers.length; i++){
-    sum = sum + Math.pow(numbers[i], digit);
+for(let i=1; i<number.length; i++){
+    digit = digit + 1;
 }
 
-if (sum === num) {
-    console.log(num + " girdiğiniz sayı bir Armstrong sayıdır.");
-} else {
-    console.log(num + " girdiğiniz sayı bir Armstrong sayı değildir.");
+console.log(digit)
+
+for( let i=0; i<number.length; i++){
+    sum = sum + Math.pow(number[i], digit);
 }
+
+if( num == sum ){
+    console.log(num + ' sayısı bir armstrong number dır');
+}else {
+    console.log(num + ' sayısı bir armstrong number değildir');
+}
+
+
+
+
